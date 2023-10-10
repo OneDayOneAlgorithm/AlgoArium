@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/scroll_bg">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/promote_problem_frame"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_50sdp"
+        android:scaleType="fitXY"
+        android:src="@drawable/tierup_problem_frame"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:gravity="center"
+        android:id="@+id/promote_problem"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/promote_problem_difficulty"
+            android:layout_weight="0.1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:src="@drawable/tier1"
+            tools:src="@drawable/tier1" />
+
+        <com.blueiobase.api.android.strokedtextview.StrokedTextView
+            android:gravity="center"
+            android:layout_weight="0.2"
+            style="@style/promoteNumberStyle"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:id="@+id/promote_problem_number"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            tools:text="19999" />
+
+        <com.blueiobase.api.android.strokedtextview.StrokedTextView
+            android:id="@+id/promote_problem_title"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_weight="0.7"
+            android:gravity="center"
+            style="@style/promoteStyle"
+            android:maxLines="1"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:scrollHorizontally="true"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            tools:text="아니 세상에 이런일이 있을 수 있나요" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

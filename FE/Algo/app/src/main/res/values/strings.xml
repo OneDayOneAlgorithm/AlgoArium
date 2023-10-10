@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">알고알리움</string>
+
+    <!-- Fragment Title -->
+    <string name="title_home">Home</string>
+    <string name="title_recommend">Recommend</string>
+    <string name="title_stat">Stat</string>
+    <string name="title_rank">Rank</string>
+    <string name="title_promote">Promote</string>
+    <string name="title_memo">Memo</string>
+    <string name="recommend_strong_text">\u0020강점 문제 추천</string>
+    <string name="recommend_weak_text">\u0020약점 문제 추천</string>
+    <string name="recommend_similar_text">\u0020비슷한 사용자 문제 추천</string>
+    <string name="edittext_hint"><font size="18" color="#999C9B9B">백준ID 입력</font></string>
+    <string name="code"><font color="#ffff4651">코드발급</font></string>
+
+    <string name="app_exit_label">한번 더 뒤로가기를 누르면 종료됩니다.</string>
+
+    <!-- StatusFragment -->
+    <string name="status_checkbox_text">티어 평균 표시</string>
+
+    <!-- MemoFragment -->
+    <string name="memo_register_button">등록</string>
+    <string name="memo_text_hint">화면을 눌러 메모를 작성하세요.</string>
+</resources>
