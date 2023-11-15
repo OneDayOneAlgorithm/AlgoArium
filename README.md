@@ -122,16 +122,34 @@ $ http://j9d204.p.ssafy.io:8090/
 1. **원격 저장소 복제(git clone)**
 
 ```bash
-$ https://lab.ssafy.com/s09-bigdata-recom-sub2/S09P22D204.git
+https://github.com/OneDayOneAlgorithm/AlgoArium.git
 ```
 
-2. **프로젝트 폴더로 이동**
+2. **MariaDB 10.11버전 설치**
 
 ```bash
-$ cd BE/algoarium
+https://mariadb.org/download/?t=mariadb&p=mariadb&r=10.11.6&os=windows&cpu=x86_64&pkg=msi&m=blendbyte
 ```
 
-3. **main 메서드 실행하기**
+3. **HeidiSQL툴을 사용해서 사용자 : root / 암호 : 1234 로 세션 생성**
+
+<img src="./README/session.png" width="400" height="300">
+
+4. **이름 : test 로 DB 생성**
+
+<img src="./README/DB.png" width="700" height="300">
+
+5. **jar 파일이 있는 경로로 이동**
+
+```bash
+$ cd BE/algoarium/build/libs
+```
+
+6. **서버 실행**
+
+```bash
+java -jar algoarium-0.0.1-SNAPSHOT.jar
+```
 
 <br>
 <br>
