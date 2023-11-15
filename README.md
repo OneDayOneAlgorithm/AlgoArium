@@ -481,12 +481,12 @@ $ cd AlgoArium\FE\Algo
 
 ## 8. Team
 
-- 김현진 - Hyunjin Kim - x - [x](https://github.com/OneDayOneAlgorithm) [Back]
-- 김형진 - Hyungjin Kim - gudwls9966@gmail.com - [GitHub](https://github.com/OneDayOneAlgorithm) [Back]
-- 박현우 - Hyunwoo Park - x - [x](https://github.com/OneDayOneAlgorithm) [Front / PM]
-- 손민균 - Minkyun Son - x - [x](https://github.com/OneDayOneAlgorithm) [Back]
-- 이상혁 - Sanghyuk Lee - makada23@gmail.com - [GitHub](https://github.com/LeeSanghyuk36) [Back]
-- 정용우 - Yongwoo Jeong - x - [x](https://github.com/OneDayOneAlgorithm) [Front]
+- 김현진 - Hyunjin Kim - [Back]
+- 김형진 - Hyungjin Kim - [Back]
+- 박현우 - Hyunwoo Park - [Front]
+- 손민균 - Minkyun Son - [Back]
+- 이상혁 - Sanghyuk Lee - [Back]
+- 정용우 - Yongwoo Jeong - [Front]
 
 <br>
 <br>
