@@ -9,8 +9,6 @@
 3. [주요 기능](#3-주요-기능)
 4. [프로젝트 실행방법](#4-프로젝트-실행-방법)
 5. [기술스택](#5-기술-스택)
-   1. [Mobile](#51-front-end)
-   2. [Back-End](#52-back-end)
 6. [프로젝트 구조도](#6-프로젝트-구조도)
 7. [Design](#7-design)
 8. [Team](#8-team)
@@ -31,7 +29,7 @@
 
 ## 2. 프로젝트 소개
 
-🌊 Naming : 알고리즘문제를 의미하는 알고와 알려준다라는 의미를 가진 알리움을 결합. 
+🌊 알고알리움 : '알고리즘문제를 알려준다' + '아쿠아리움'
 
 - 알고리즘 문제를 사용자에 실력에 맞추어 (강점 문제, 약점 문제, 비슷한 사용자가 푼 문제)로 나누어 알고리즘 문제를 추천해주는 빅데이터 기반 추천 프로젝트
 
@@ -105,7 +103,7 @@
 <br>
 <br>
 
-## 4. 프로젝트 실행 방법(현재 서버 닫음)
+## 4. 프로젝트 실행 방법
 
 ### 4.1. client 실행
 
@@ -140,33 +138,41 @@ $ cd BE/algoarium
 
 ## 5. 기술 스택
 
-### 5.1. Front-End
+### 5.1. Back-End
 
-<img src="https://img.shields.io/badge/Android%20Studio-3DDC84?style=for-the-badge&logo=Figma&logoColor=white"><img src="https://img.shields.io/badge/KAKAO-FFCD00?style=for-the-badge&logo=Kakao&logoColor=black">
+- **Spring boot** : 알고알리움 Project의 전반적인 Rest Controller 구현.
+- **JPA (Hibernate)** : ORM인 Hibernate를 활용하여 객체 중심의 개발을 할 수 있도록 하였고, SQL을 직접 작성하지 않고 Entity 필드가 되는 객체를 통해 DB를 동작시켜 유지보수에 용이하게 활용.
+  - 동일한 쿼리에 대한 캐시 기능을 사용하기 때문에 높은 효율성 기대.
+- **Django** : 빅데이터 추천 알고리즘 기능 구현.
+- **MariaDB** : RDBMS로 알고알리움의 사용자, 문제 정보 등 필요한 데이터를 저장.
+- **Redis** : 비관계형 데이터베이스로 'Key-Value' 구조 데이터 관리 시스템이며, 데이터를 메모리에 저장하여 빠른 처리속도가 필요한 기능에 적용.
+  - 만료일을 저장하면 만료 시 자동으로 데이터가 사라지는 특성을 활용하여 카카오톡 인증 토큰을 저장하여 로그인에 활용.
+- **AWS** : EC2 서비스를 이용하여 Ubuntu 서버를 구축 (호스팅).
+- **Nginx** : 웹 서버를 구축
+  - default.conf를 수정하여 EC2에 저장된 파일 경로를 참조할 수 있게 활용.
+- **WebSocket** : 웹 상에서 쉽게 소켓 통신을 하게 해주는 라이브러리를 활용하여 모바일-PC로 알고리즘 URL 정보를 전달해주는 기능을 구현.
+- **STOMP** : Http에 모델링된 frame 기반의 메세징 프로토콜을 통해 메세지 전송을 좀 더 효율적으로 하기 위해 활용.
+  - `STOMP Hanler`를 구현하여 Subscribe를 통해 통신하고자 하는 주체(Topic)를 판단하여 실시간, 지속적으로 감시하고 해당 요청이 들어오면 처리하도록 구현. (Broker 역할 수행)
 
-<br>
+### 5.2. Front-End
 
-### 5.2. Back-End
+- **Android Studio** : 알고알리움 Project의 mobile 어플리케이션 구현.
+- **Kakao API** : 카카오 인증 토큰을 주고 받아 로그인 기능 구현.
 
-#### API 서버
+### 5.3. TEAM Cooperaion
 
-<img src="https://img.shields.io/badge/Java-3DDC84?style=for-the-badge&logo=Kakao&logoColor=black"><img src="https://img.shields.io/badge/SpringBoot-6DB33F?style=for-the-badge&logo=SpringBoot&logoColor=white"><img src="https://img.shields.io/badge/KAKAO-FFCD00?style=for-the-badge&logo=Kakao&logoColor=black">
-
-#### 추천 시스템 서버
-
-<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white"><img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=Django&logoColor=white">
-
-#### DB
-
-<img src="https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=Figma&logoColor=white">
-
-### Deployment
-
-<img src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=Ubuntu&logoColor=white"><img src="https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=Jenkins&logoColor=black"><img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=Docker&logoColor=white"><img src="https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=Nginx&logoColor=white">
-
-### Communication
-
-<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=Git&logoColor=white"><img src="https://img.shields.io/badge/Gitlab-FC6D26?style=for-the-badge&logo=Gitlab&logoColor=white"><img src="https://img.shields.io/badge/Jira-0052CC?style=for-the-badge&logo=JiraSoftware&logoColor=white"><img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=Notion&logoColor=white"><img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=Figma&logoColor=white"><img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Figma&logoColor=white">
+- **GitLab**: GitLab을 활용하여 프로젝트를 관리.
+  - Git Flow 에 따른 브랜치 전략 수립.
+  - MR 시 코드 리뷰 진행.
+- **Jira**: 이슈 관리 도구로 활용.
+  - 주요 기능들을 이슈로 등록하고 Stroy Point를 산정한 후, 담당자를 지정하여 프로젝트를 진행.
+  - 1~2 주 정도 상황에 맞게 스프린트를 설정.
+- **Google Drive** : 협업을 위한 공용 문서 및 산출물들을 공유할 수 있도록 활용.
+  - 동시 문서 작성 (Google Docs).
+  - 대용량 파일 첨부.
+- **Notion**
+  - 일정 관리 및 트러블 슈팅 메모.
+  - 세션을 통해 새로운 지식 공유.
 
 <br>
 <br>
@@ -445,76 +451,12 @@ $ cd BE/algoarium
 
 ## 8. Team
 
-### 8.1. Front-end
-
-<table class="tg">
-<thead>
-  <tr>
-    <th class="tg-0pky">팀원</th>
-    <th class="tg-0pky">박현우</th>
-    <th class="tg-0pky">정용우</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="tg-0pky">GitHub</td>
-    <td class="tg-0pky">-</td>
-    <td class="tg-0pky">-</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">역할 및 담당 기능</td>
-    <td class="tg-0pky">
-    - 팀장<br>
-    - 디자인<br>
-    - 필터링</td>
-    <td class="tg-0pky">
-    - FE 팀장<br>
-    - 컴포넌트 구조 설계<br>
-    - 검색</td>
-  </tr>
-</tbody>
-</table>
-
-<br>
-
-### 8.2. Back-end
-
-<table>
-<thead>
-  <tr>
-    <th class="tg-0pky">팀원</th>
-    <th class="tg-0pky">김현진</th>
-    <th class="tg-0pky">이상혁</th>
-    <th class="tg-0pky">손민균</th>
-    <th class="tg-0pky">김형진</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td class="tg-0pky">GitHub</td>
-    <td class="tg-0pky">-</td>
-    <td class="tg-0pky">-</td>
-    <td class="tg-0pky">-</td>
-    <td class="tg-0pky">-</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">역할 및 담당 기능</td>
-    <td class="tg-0pky">
-    - BE 팀장<br>
-    - CI/CD<br>
-    - 장소관리</td>
-    <td class="tg-0pky">
-    - 인프라<br>
-    - API</td>
-    <td class="tg-0pky">
-    - 추천 알고리즘<br>
-    - 검색</td>
-    <td class="tg-0pky">
-    - 회원관리<br>
-    - 검색</td>
-  </tr>
-</tbody>
-</table>
+- 김현진 - Hyunjin Kim - x - [x](https://github.com/OneDayOneAlgorithm) [Back]
+- 김형진 - Hyungjin Kim - gudwls9966@gmail.com - [GitHub](https://github.com/OneDayOneAlgorithm) [Back]
+- 박현우 - Hyunwoo Park - x - [x](https://github.com/OneDayOneAlgorithm) [Front / PM]
+- 손민균 - Minkyun Son - x - [x](https://github.com/OneDayOneAlgorithm) [Back]
+- 이상혁 - Sanghyuk Lee - makada23@gmail.com - [GitHub](https://github.com/LeeSanghyuk36) [Back]
+- 정용우 - Yongwoo Jeong - x - [x](https://github.com/OneDayOneAlgorithm) [Front]
 
 <br>
 <br>
