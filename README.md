@@ -1,6 +1,6 @@
 # 🧳 알고알리움
 
-![intro page](./README/intro_page.png =150x300)
+![intro page](README/intro_page.png =150x300)
 
 
 
