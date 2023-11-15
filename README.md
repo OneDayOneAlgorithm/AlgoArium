@@ -1,6 +1,7 @@
 # 🧳 알고알리움
 
-![intro page](README/intro_page.png =150x300)
+<img src="./README/intro_page.png" width="150" height="300">
+
 
 
 
