@@ -438,8 +438,7 @@ $ cd BE/algoarium
 
 ### 7.1. 시스템 구조도
 
-![Architecture](./README/architecture.jpg){: width="400" height="300"}
-<img src="README/pc.png" width="400" height="300">
+<img src="README/architecture.png" width="400" height="300">
 
 <br>
 
