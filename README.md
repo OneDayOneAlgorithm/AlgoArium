@@ -2,9 +2,6 @@
 
 <img src="./README/intro_page.png" width="150" height="300">
 
-
-
-
 ## == Contents ==
 
 1. [개요](#1-개요)
@@ -57,7 +54,7 @@
 
 ### 3.1. 시즌 별 티어 제도
 
-![tier](./README/tier.png){: width="150" height="300"}
+<img src="README/tier.png" width="150" height="300">
 
 - 8단계의 티어를 두어 시즌 내 특정 포인트 달성 시 승급
 - 매 시즌 포인트 초기화
