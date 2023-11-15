@@ -105,19 +105,7 @@
 
 ## 4. 프로젝트 실행 방법
 
-### 4.1. client 실행
-
-1. **PC클라이언트 다운로드**
-
-```bash
-$ http://j9d204.p.ssafy.io:8090/
-```
-
-2. **모바일에서 인증코드 확인 후 연동**
-
-<br>
-
-### 4.2. server 실행
+### 4.1. server 실행
 
 1. **원격 저장소 복제(git clone)**
 
@@ -150,6 +138,30 @@ $ cd BE/algoarium/build/libs
 ```bash
 java -jar algoarium-0.0.1-SNAPSHOT.jar
 ```
+
+<br>
+
+### 4.2. client 실행
+
+1. **응용 프로그램 실행**
+
+```bash
+$ cd Algoarium
+$ start Algoarium.exe
+// 이후 모바일에서 인증코드 확인 후 연동.
+```
+
+<br>
+
+### 4.3 mobile 실행
+
+1. **mobile 코드 경로로 이동**
+
+```bash
+$ cd AlgoArium\FE\Algo
+```
+
+2. **Adroid Studio로 실행**
 
 <br>
 <br>
