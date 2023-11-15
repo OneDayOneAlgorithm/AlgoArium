@@ -64,7 +64,7 @@
 
 ### 3.2. 랭킹 제도
 
-![ranking](./README/ranking.png){: width="150" height="300"}
+<img src="README/ranking.png" width="150" height="300">
 
 - 포인트를 기반으로 전체 사용자의 랭킹을 보여줌
 
@@ -72,7 +72,7 @@
 
 ### 3.3. 스탯 제도
 
-![status](./README/status.png){: width="150" height="300"}
+<img src="README/status.png" width="150" height="300">
 
 - 사용자에게 5개의 스탯 (지혜, 생명, 힘, 운, 카리스마)을 할당
 - 지혜 : 푼 문제 수
@@ -85,7 +85,7 @@
 
 ### 3.4 알고리즘 문제 추천
 
-![recommend](./README/recommend.png){: width="150" height="300"}
+<img src="README/recommend.png" width="150" height="300">
 
 - 알고리즘 문제를 사용자에 실력에 맞추어 (강점 문제, 약점 문제, 비슷한 사용자가 푼 문제)로 나누어 알고리즘 문제를 추천
 
@@ -95,7 +95,7 @@
 
 ### 3.5 모바일 - PC 연동
 
-![pc](./README/pc.png){: width="350" height="300"}
+<img src="README/pc.png" width="350" height="300">
 
 - PC 어플리케이션을 실행하고 모바일과 연동 한 후 모바일 환경에서 문제를 클릭하면 해당 PC에 백준 문제페이지를 띄움
 - 어플리케이션은 백그라운드에서도 실행 가능
@@ -439,6 +439,7 @@ $ cd BE/algoarium
 ### 7.1. 시스템 구조도
 
 ![Architecture](./README/architecture.jpg){: width="400" height="300"}
+<img src="README/pc.png" width="400" height="300">
 
 <br>
 
