@@ -474,7 +474,13 @@ $ cd AlgoArium\FE\Algo
 
 ### 7.2. API 설계
 
-[API 명세서](https://ten-brownie-866.notion.site/54edf2756f7848de9f43c8d8c85f85e3?pvs=4)
+<img src="README/function.png">
+
+<br>
+
+### 7.3. ERD
+
+<img src="README/ERD.png">
 
 <br>
 <br>
