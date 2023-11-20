@@ -1,0 +1,21 @@
+plugins {
+	id 'java' // Java 플러그인
+	id 'application' // Application 플러그인
+	id 'com.github.johnrengelman.shadow' version '7.0.0' // Shadow Plugin (JAR 파일 빌드용)
+}
+
+application {
+	mainClassName = 'com.ssafy.socket.WebSocketClient' // 실행될 메인 클래스 지정
+}
+
+repositories {
+	mavenCentral() // Maven 중앙 저장소 사용
+}
+
+dependencies {
+	implementation 'org.glassfish.tyrus.bundles:tyrus-standalone-client:1.17' // Tyrus WebSocket 클라이언트 라이브러리
+	implementation 'org.springframework:spring-websocket:5.3.10' // Spring WebSocket 라이브러리
+	implementation 'org.springframework:spring-messaging:5.3.10' // Spring Messaging 라이브러리
+	implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.0' // Jackson 데이터 바인딩 라이브러리
+	implementation 'org.springframework.boot:spring-boot-starter-web:2.5.4' // Spring Boot 웹 라이브러리
+}

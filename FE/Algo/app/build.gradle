@@ -1,0 +1,120 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
+    id 'kotlin-parcelize'
+}
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+def kakaoKey = "\"${project.property("kakao_key")}\""
+
+android {
+    namespace 'com.d204.algo'
+    compileSdk 33
+    defaultConfig {
+        applicationId "com.d204.algo"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "KAKAO_KEY", kakaoKey
+        resValue "string", "KAKAO_KEY_SCHEME", '"${kakao_key_scheme}"'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+    buildFeatures {
+        buildConfig true
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.6.0'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.6.0'
+    implementation 'androidx.security:security-crypto-ktx:1.1.0-alpha03'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    // dagger-hilt
+    implementation 'com.google.dagger:dagger-android:2.47'
+    implementation 'com.google.dagger:dagger-android-support:2.47' // if you use the support libraries
+    annotationProcessor 'com.google.dagger:dagger-android-processor:2.47'
+    implementation 'com.google.dagger:dagger:2.47'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.47'
+    implementation "com.google.dagger:hilt-android:2.47"
+    kapt "com.google.dagger:hilt-compiler:2.47"
+
+    // Room
+    def room_version = "2.5.0"
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
+    //GIFView
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.27'
+
+    // Lottie
+    def lottieVersion = "6.1.0"
+    implementation "com.airbnb.android:lottie:$lottieVersion"
+
+    // sdp
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+
+    // retrofit
+    "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation 'com.squareup.moshi:moshi:1.12.0'
+    implementation "com.squareup.moshi:moshi-kotlin:1.12.0"
+    implementation "com.squareup.retrofit2:converter-scalars:2.9.0"
+    implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
+    implementation "com.squareup.okhttp3:logging-interceptor:4.10.0"
+
+    // kakao
+    implementation "com.kakao.sdk:v2-all:2.15.0" // 전체 모듈 설치, 2.11.0 버전부터 지원
+
+    // circleImageView
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    // DataStore
+    implementation "androidx.datastore:datastore-preferences:1.0.0"
+    implementation "androidx.datastore:datastore-preferences-rxjava3:1.0.0"
+    implementation "androidx.datastore:datastore-preferences-core:1.0.0"
+
+    // Outline TextView
+    implementation 'io.github.iodevblue:strokedtextview:1.0.0'
+
+    // Toggle
+    implementation 'io.github.bitvale:switcher:1.1.2'
+
+    // Stomp
+    implementation 'com.github.NaikSoftware:StompProtocolAndroid:1.6.6'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.5'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+
+    // EncryptedSharedPreferences
+    implementation "androidx.security:security-crypto-ktx:1.1.0-alpha03"
+}
